@@ -1,2 +1,4 @@
 # EAGLE_Capacitive_Scrollwheel_Generator
-MATLAB functions to generate EAGLE scripts (*.scr) for programmatically drawing capacitive touch scrollwheels.
+Functions for generating EAGLE scripts (*.scr) to programmatically drawing capacitive touch scrollwheels.
+
+Original functions are written in MATLAB, with plans to port to Python in the future.
