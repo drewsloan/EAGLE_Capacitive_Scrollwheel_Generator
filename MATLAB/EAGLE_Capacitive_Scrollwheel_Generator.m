@@ -29,6 +29,7 @@ line_width = 0.2;       %Line width of the polygon, in millimeters.
 separation = 0.5;       %Separation between the traces, in millimeters.
 start_angle = 90;       %Starting angle for the middle of element #1.
 
+
 repo = ...
     'https://github.com/drewsloan/EAGLE_Capacitive_Scrollwheel_Generator';  %We'll write the repository URL into the description to make it easy to find in the future.
 
@@ -58,6 +59,8 @@ fprintf(fid,'SET WIRE_BEND 2;\n\n');                                        %Set
 
 
 % Draw the inside edge of each element.
+r_inner = r_inner + line_width/2;                                           %Adjust the inner radius to account for the line width.
+r_outer = r_outer - line_width/2;                                           %Adjust the outer radius to account for the line width.
 sp = 2*separation + line_width;                                             %Set the spacing step.
 tw = ((r_outer - r_inner) - (n_tines - 0.5)*sp)/(n_tines - 0.5);            %Set the tine base width.
 for i = 1:n_elements                                                        %Step through each element.
